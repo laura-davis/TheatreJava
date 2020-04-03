@@ -4,21 +4,30 @@ public class Ticket {
 
     protected double totalCost;
 
+    // constructor with arguments
     public Ticket(double totalCost) {
         this.totalCost = totalCost;
+    }
+    // constructor without arguments
+    public Ticket() {
+        //
     }
 
     double cost() {
         // to do
         return 0.0;
-    };
+    }
+
+    ;
 
     void setPrice(double price) {
         totalCost = price;
         System.out.println("\nThe total cost of your tickets (including any applicable discount) is " + cost() + ".\n");
-    };
+    }
 
-    void printTicket(String showName, String showDate, String showTime, int numSeats, String fullName, String address) {
+    ;
+
+    void printTicket(String showName, String showDate, String showTime, int numSeats, String firstName, String lastName, String address) {
         // to do
         System.out.println("-------------------- Your Tickets --------------------\n");
         System.out.println("------------------------------------------------------\n");
@@ -28,10 +37,11 @@ public class Ticket {
         System.out.println("------------------------------------------------------\n");
         System.out.println("Number of seats: \t" + numSeats + "\n");
         System.out.println("Total cost: \t" + showDate + "\n");
-        System.out.println("Ticket purchaser: \t" + fullName  + "\n");
+        System.out.println("Ticket purchaser: \t" + firstName + " " + lastName + "\n");
         System.out.println("Postal address: \t" + address + "\n");
         System.out.println("------------------------------------------------------\n");
+    }
 
-    };
+    ;
 
 }

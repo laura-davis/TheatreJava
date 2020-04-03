@@ -10,6 +10,7 @@ public class ShowSeat {
     protected int numSeats;
     protected int rowNum;
     double price;
+    String seatSelection;
     Scanner scanner = new Scanner(System.in);
 
     public ShowSeat() {
@@ -35,7 +36,7 @@ public class ShowSeat {
 
     public int getNumSeats() {
         // to do
-        System.out.println("------------- Select seats interactively -------------\n");
+        System.out.println("\n------------- Select seats interactively -------------\n");
         do {
             System.out.println("How many seats would you like to purchase (maximum of 8)?: ");
             numSeats = scanner.nextInt();
@@ -44,13 +45,44 @@ public class ShowSeat {
         return numSeats;
     }
 
-    public double getSeatSelection() {
+    public String getSeatSelection() {
         // to do
-        return 0.0;
+        char choice;
+        System.out.println("Please select a row number: ");
+        rowNum = scanner.nextInt();
+        System.out.println("Please select a column letter: ");
+        column = scanner.next().charAt(0);
+        System.out.println("You have selected seat: " + rowNum + column + ".");
+        System.out.println("Are you happy with your choice? Y = Yes / N = No: ");
+        choice = scanner.next().charAt(0);
+        seatSelection = Integer.toString(rowNum) + column;
+        if (choice == 'y' || choice == 'Y') {
+            // proceed - to do
+        } else {
+            // cancel - to do
+        }
+        return seatSelection;
     }
 
     private void displayFloorPlan(int row, char column) {
-        // to do
+        System.out.println("\n+---------------------------+");
+        System.out.println("|     A | B | C | D | E | F |");
+        System.out.println("| 1 | - | - | - | - | - | - |");
+        System.out.println("+---|---|---|---|---|---|---+");
+        System.out.println("| 2 | - | - | - | - | - | - |");
+        System.out.println("+---|---|---|---|---|---|---+");
+        System.out.println("| 3 | - | - | - | - | - | - |");
+        System.out.println("+---|---|---|---|---|---|---+");
+        System.out.println("| 4 | - | - | - | - | - | - |");
+        System.out.println("+---|---|---|---|---|---|---+");
+        System.out.println("| 5 | - | - | - | - | - | - |");
+        System.out.println("+---|---|---|---|---|---|---+");
+        System.out.println("| 6 | - | - | - | - | - | - |");
+        System.out.println("+---|---|---|---|---|---|---+");
+        System.out.println("| 7 | - | - | - | - | - | - |");
+        System.out.println("+---------------------------+\n");
+        System.out.println("Key:");
+        System.out.println("- :\tAvailable / x :\tBooked / * : On hold");
     }
 
     private void calculatePrice(double price) {
