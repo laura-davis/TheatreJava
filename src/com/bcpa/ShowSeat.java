@@ -3,68 +3,72 @@ package com.bcpa;
 import java.util.Scanner;
 
 public class ShowSeat {
-    // if not explicitly mentioned, variables etc assumed public?
+
+    // declare variables
     int row;
     char column;
-    protected char[][] floorPlan = new char[7][6];
+    //    protected char[][] floorPlan = new char[7][6];
     protected int numSeats;
-    protected int rowNum;
-    double price;
+    //    double price = 0;
     String seatSelection;
+
+    // initialise scanner to collect user input
     Scanner scanner = new Scanner(System.in);
 
-    public ShowSeat() {
-        // to do - check if this is right... different to example, using char instead of int, and rowNum starting at 1 rather than 0
-        for (int r = 0; r < 7; r++) {
-            for (char c = 0; c < 'g'; c++) {
-                floorPlan[r][c] = 'x';
-                numSeats = 0;
-                rowNum = 1;
-                price = 0;
-            }
-        }
-    }
+    // constructor - not used
+//    public void showSeat() {
+//        for (int r = 0; r < 7; r++) {
+//            for (char c = 'A'; c < 'F'; c++) {
+//                floorPlan[r][c] = '-';
+//            }
+//        }
+//        numSeats = 0;
+//        row = 0;
+//        price = 0;
+//    }
 
-    public void initialiseFloorPlan() {
-        // to do
-        for (int r = 0; r < 7; r++) {
-            for (char c = 'a'; c < 'g'; c++) {
-                floorPlan[r][c] = 'A';
-            }
-        }
-    }
+    // initialise floor plan
+    // to do
+//    void initialiseFloorPlan() {
+//        // to do
+//        for (int r = 0; r < 7; r++) {
+//            for (int c = 0; c < 6; c++) {
+//                floorPlan[r][c] = '-';
+//            }
+//        }
+//    }
 
-    public int getNumSeats() {
+    // get number of seats
+    int getNumSeats() {
         // to do
         System.out.println("\n------------- Select seats interactively -------------\n");
         do {
-            System.out.println("How many seats would you like to purchase (maximum of 8)?: ");
+            System.out.print("How many seats would you like to purchase (maximum of 8)?: ");
             numSeats = scanner.nextInt();
         }
         while (numSeats < 0 && numSeats > 8);
         return numSeats;
     }
 
-    public String getSeatSelection() {
-        // to do
-        char choice;
-        System.out.println("Please select a row number: ");
-        rowNum = scanner.nextInt();
-        System.out.println("Please select a column letter: ");
-        column = scanner.next().charAt(0);
-        System.out.println("You have selected seat: " + rowNum + column + ".");
-        System.out.println("Are you happy with your choice? Y = Yes / N = No: ");
-        choice = scanner.next().charAt(0);
-        seatSelection = Integer.toString(rowNum) + column;
-        if (choice == 'y' || choice == 'Y') {
-            // proceed - to do
-        } else {
-            // cancel - to do
+    // get seat selection
+    String getSeatSelection() {
+        do {
+            System.out.print("Please select a row number (1 - 7): ");
+            row = scanner.nextInt();
         }
+        while (row < 1 && row > 7);
+        do {
+            System.out.print("Please select a column letter (A - F): ");
+            column = scanner.next().charAt(0);
+        }
+        while (column < 'a' && column > 'F');
+        System.out.println("You have selected seat: " + row + Character.toUpperCase(column) + ".\n");
         return seatSelection;
     }
 
-    private void displayFloorPlan(int row, char column) {
+    // display floor plan
+    // to do - this is hard-coded for now
+    public void displayFloorPlan() {
         System.out.println("\n+---------------------------+");
         System.out.println("|     A | B | C | D | E | F |");
         System.out.println("| 1 | - | - | - | - | - | - |");
@@ -85,8 +89,13 @@ public class ShowSeat {
         System.out.println("- :\tAvailable / x :\tBooked / * : On hold");
     }
 
-    private void calculatePrice(double price) {
-        // to do
+    // calculate price
+    double calculatePrice(double price) {
+        if (row > 0 && row <= 4) {
+            price += 20;
+        } else if (row >= 5) {
+            price += 30;
+        }
+        return price;
     }
-
 }

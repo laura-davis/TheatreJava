@@ -3,37 +3,38 @@ package com.bcpa;
 import java.util.Scanner;
 
 public class Show {
+
+    // declare variables
     protected String showName;
-    // change this to date?
-    protected String showDate;
-    // change this to time?
-    protected String showTime;
+    protected String showDate; // change this to a date?
+    protected String showTime; // change this to a time?
     char choice;
+
+    // initialise scanner to collect user input
     Scanner scanner = new Scanner(System.in);
 
-    // constructor with arguments
-    public Show(String showName, String showDate, String showTime) {
-        this.showName = showName;
-        this.showDate = showDate;
-        this.showTime = showTime;
-    }
+    // constructor with arguments - not used
+//    public Show(String showName, String showDate, String showTime) {
+//        this.showName = showName;
+//        this.showDate = showDate;
+//        this.showTime = showTime;
+//    }
 
     // constructor without arguments
     public Show() {
     }
 
+    // select show name
     String selectShowName() {
         System.out.println("\n------------------- Select a show --------------------\n");
         System.out.println("1. Hamilton");
         System.out.println("2. Mamma Mia");
         System.out.println("3. Matilda");
-
         do {
             System.out.print("\nPlease select a valid show by entering a number (1 - 3): ");
             choice = scanner.next().charAt(0);
         }
         while (choice != '1' && choice != '2' && choice != '3');
-
         switch (choice) {
             case '1':
                 showName = "Hamilton";
@@ -48,6 +49,7 @@ public class Show {
         return showName;
     }
 
+    // select show date
     String selectShowDate() {
         System.out.println("\n------------------- Select a date --------------------\n");
         System.out.println("1. 01/04/2020");
@@ -58,7 +60,6 @@ public class Show {
             choice = scanner.next().charAt(0);
         }
         while (choice != '1' && choice != '2' && choice != '3');
-
         switch (choice) {
             case '1':
                 showDate = "01/04/2020";
@@ -73,26 +74,21 @@ public class Show {
         return showDate;
     }
 
-    void selectShowTime() {
+    // select show time
+    String selectShowTime() {
         System.out.println("\n------------------- Select a time --------------------\n");
         do {
             System.out.println("Would you like to book tickets for the matinee performance (1pm),");
-            System.out.println("or the evening performance (7pm)? M = Matinee / E = Evening): ");
+            System.out.print("or the evening performance (7pm)? M = Matinee / E = Evening): ");
             choice = scanner.next().charAt(0);
         }
         while (choice != 'e' && choice != 'E' && choice != 'm' && choice != 'M');
         if (choice == 'e' || choice == 'E') {
-            showTime = "1pm";
-        } else {
             showTime = "7pm";
+        } else {
+            showTime = "1pm";
         }
         System.out.println("You have selected " + showName + " on " + showDate + " at " + showTime + ".\n");
-        System.out.println("Are you happy with your choice? Y = Yes / N = No: ");
-        choice = scanner.next().charAt(0);
-        if (choice == 'y' || choice == 'Y') {
-            // to do - ticket interface?
-        } else {
-            // cancel - to do
-        }
+        return showTime;
     }
 }

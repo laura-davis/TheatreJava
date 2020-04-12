@@ -2,46 +2,40 @@ package com.bcpa;
 
 public class Ticket {
 
+    // initialise variables
     protected double totalCost;
 
     // constructor with arguments
     public Ticket(double totalCost) {
         this.totalCost = totalCost;
     }
-    // constructor without arguments
-    public Ticket() {
-        //
-    }
 
-    double cost() {
-        // to do
-        return 0.0;
-    }
+    // constructor without arguments - not used
+//    public Ticket() {
+//    }
 
-    ;
+    // cost - not used
+//    double cost() {
+//        // to do - set as virtual in example
+//        return 0.0;
+//    }
 
+    // set price
     void setPrice(double price) {
         totalCost = price;
-        System.out.println("\nThe total cost of your tickets (including any applicable discount) is " + cost() + ".\n");
+        System.out.println("\nThe total cost of your tickets (including any applicable discount) is " + totalCost + ".\n");
     }
 
-    ;
-
-    void printTicket(String showName, String showDate, String showTime, int numSeats, String firstName, String lastName, String address) {
+    // print ticket
+    public void printTicket(String showName, String showDate, String showTime, int numSeats, String firstName, String lastName, String address) {
         // to do
         System.out.println("-------------------- Your Tickets --------------------\n");
-        System.out.println("------------------------------------------------------\n");
-        System.out.println("Show: \t\t" + showName + "\n");
-        System.out.println("Date: \t\t" + showDate + "\n");
-        System.out.println("Time: \t\t" + showTime + "\n");
-        System.out.println("------------------------------------------------------\n");
-        System.out.println("Number of seats: \t" + numSeats + "\n");
-        System.out.println("Total cost: \t" + showDate + "\n");
-        System.out.println("Ticket purchaser: \t" + firstName + " " + lastName + "\n");
-        System.out.println("Postal address: \t" + address + "\n");
-        System.out.println("------------------------------------------------------\n");
+        System.out.println("Show: \t\t\t\t" + showName);
+        System.out.println("Date: \t\t\t\t" + showDate);
+        System.out.println("Time: \t\t\t\t" + showTime);
+        System.out.println("Number of seats: \t" + numSeats);
+        System.out.println("Total cost: \t\t" + totalCost);
+        System.out.println("Ticket purchaser: \t" + firstName + " " + lastName);
+        System.out.println("Postal address: \t" + address);
     }
-
-    ;
-
 }
