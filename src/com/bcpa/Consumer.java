@@ -10,13 +10,6 @@ public class Consumer {
     // initialise scanner to collect user input
     Scanner scanner = new Scanner(System.in);
 
-    // constructor with arguments - not used
-//    public Consumer(String firstName, String lastName, String address) {
-//        this.firstName = firstName;
-//        this.lastName = lastName;
-//        this.address = address;
-//    }
-
     // constructor without arguments
     public Consumer() {
     }
@@ -33,17 +26,6 @@ public class Consumer {
     public String getAddress() {
         return address;
     }
-
-    // setters - not used
-//    public void setFirstName(String firstName) {
-//        this.firstName = firstName;
-//    }
-//    public void setLastName(String lastName) {
-//        this.lastName = lastName;
-//    }
-//    public void setAddress(String address) {
-//        this.address = address;
-//    }
 
     // login
     void login() {
@@ -73,35 +55,6 @@ public class Consumer {
         System.out.print("Enter your address: ");
         address = scanner.next();
     }
-
-    //  allow customer to change their details - not used
-//     void changeDetails(Consumer consumer) {
-//        char choice;
-//        System.out.println("\n--------- View / change profile information ----------\n");
-//        System.out.println("Please find your current details below.\n");
-//        System.out.println("Full name: " + firstName + " " + lastName + "\n");
-//        System.out.println("Address: " + address + "\n");
-//        System.out.println("1. Change name");
-//        System.out.println("2. Change address");
-//        System.out.println("3. Return to main menu\n");
-//        do {
-//            System.out.print("Please enter a valid menu choice number (1 - 3): ");
-//            choice = scanner.next().charAt(0);
-//        } while (choice != '1' && choice != '2' && choice != '3');
-//        if (choice == '1') {
-//            System.out.print("Enter your first name: ");
-//            firstName = scanner.next();
-//            System.out.print("Enter your last name: ");
-//            lastName = scanner.next();
-//            changeDetails(consumer);
-//        } else if (choice == '2') {
-//            System.out.print("Enter your address: ");
-//            address = scanner.next();
-//            changeDetails(consumer);
-//        } else if (choice == '3') {
-//            mainMenu();
-//        }
-//    }
 
     // get consumer payment details
     void getPaymentDetails() {

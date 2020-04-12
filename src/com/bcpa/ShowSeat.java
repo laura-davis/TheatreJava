@@ -7,36 +7,11 @@ public class ShowSeat {
     // declare variables
     int row;
     char column;
-    //    protected char[][] floorPlan = new char[7][6];
     protected int numSeats;
-    //    double price = 0;
     String seatSelection;
 
     // initialise scanner to collect user input
     Scanner scanner = new Scanner(System.in);
-
-    // constructor - not used
-//    public void showSeat() {
-//        for (int r = 0; r < 7; r++) {
-//            for (char c = 'A'; c < 'F'; c++) {
-//                floorPlan[r][c] = '-';
-//            }
-//        }
-//        numSeats = 0;
-//        row = 0;
-//        price = 0;
-//    }
-
-    // initialise floor plan
-    // to do
-//    void initialiseFloorPlan() {
-//        // to do
-//        for (int r = 0; r < 7; r++) {
-//            for (int c = 0; c < 6; c++) {
-//                floorPlan[r][c] = '-';
-//            }
-//        }
-//    }
 
     // get number of seats
     int getNumSeats() {

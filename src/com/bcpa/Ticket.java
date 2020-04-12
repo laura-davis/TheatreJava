@@ -10,16 +10,6 @@ public class Ticket {
         this.totalCost = totalCost;
     }
 
-    // constructor without arguments - not used
-//    public Ticket() {
-//    }
-
-    // cost - not used
-//    double cost() {
-//        // to do - set as virtual in example
-//        return 0.0;
-//    }
-
     // set price
     void setPrice(double price) {
         totalCost = price;

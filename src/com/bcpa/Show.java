@@ -6,19 +6,12 @@ public class Show {
 
     // declare variables
     protected String showName;
-    protected String showDate; // change this to a date?
-    protected String showTime; // change this to a time?
+    protected String showDate;
+    protected String showTime;
     char choice;
 
     // initialise scanner to collect user input
     Scanner scanner = new Scanner(System.in);
-
-    // constructor with arguments - not used
-//    public Show(String showName, String showDate, String showTime) {
-//        this.showName = showName;
-//        this.showDate = showDate;
-//        this.showTime = showTime;
-//    }
 
     // constructor without arguments
     public Show() {
