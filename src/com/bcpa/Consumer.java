@@ -2,7 +2,7 @@ package com.bcpa;
 
 import java.util.Scanner;
 
-public class Consumer {
+public class Consumer implements UserInterface {
 
     // declare variables
     protected String firstName, lastName, address, cardNumber, expiryDate;
@@ -24,7 +24,8 @@ public class Consumer {
     }
 
     // login
-    void login() {
+    @Override
+    public void login() {
         String username;
         String password;
         System.out.println("----------------------- Log In -----------------------\n");
