@@ -14,7 +14,7 @@ public class Show {
     Scanner scanner = new Scanner(System.in);
 
     // constructor without arguments
-    public Show() {
+    Show() {
     }
 
     // select show name

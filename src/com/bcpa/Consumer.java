@@ -11,19 +11,19 @@ public class Consumer {
     Scanner scanner = new Scanner(System.in);
 
     // constructor without arguments
-    public Consumer() {
+    Consumer() {
     }
 
     // getters
-    public String getFirstName() {
+    String getFirstName() {
         return firstName;
     }
 
-    public String getLastName() {
+    String getLastName() {
         return lastName;
     }
 
-    public String getAddress() {
+    String getAddress() {
         return address;
     }
 

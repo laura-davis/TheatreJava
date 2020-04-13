@@ -42,8 +42,8 @@ public class ShowSeat {
     }
 
     // display floor plan
-    // to do - this is hard-coded for now
-    public void displayFloorPlan() {
+    // TODO - this is hard-coded for now
+     void displayFloorPlan() {
         System.out.println("\n+---------------------------+");
         System.out.println("|     A | B | C | D | E | F |");
         System.out.println("| 1 | - | - | - | - | - | - |");

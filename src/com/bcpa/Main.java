@@ -53,6 +53,7 @@ public class Main {
             while (choice != 'y' && choice != 'Y' && choice != 'n' && choice != 'N');
         }
         while (choice == 'n' || choice == 'N');
+
         do {
             // create showSeat object
             ShowSeat showSeat = new ShowSeat();
