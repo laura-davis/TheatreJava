@@ -5,23 +5,26 @@ import java.util.Scanner;
 public class ShowSeat {
 
     // declare variables
-    int row;
-    char column;
-    protected int numSeats;
-    String seatSelection;
+    protected int row, numSeats;
+    protected char column;
+    protected String seatSelection;
+    protected double price = 0;
 
     // initialise scanner to collect user input
     Scanner scanner = new Scanner(System.in);
 
+    public ShowSeat() {
+        this.price = price;
+    }
+
     // get number of seats
     int getNumSeats() {
-        // to do
         System.out.println("\n------------- Select seats interactively -------------\n");
         do {
             System.out.print("How many seats would you like to purchase (maximum of 8)?: ");
             numSeats = scanner.nextInt();
         }
-        while (numSeats < 0 && numSeats > 8);
+        while (numSeats < 1 && numSeats > 8);
         return numSeats;
     }
 
@@ -43,7 +46,7 @@ public class ShowSeat {
 
     // display floor plan
     // TODO - this is hard-coded for now
-     void displayFloorPlan() {
+    void displayFloorPlan() {
         System.out.println("\n+---------------------------+");
         System.out.println("|     A | B | C | D | E | F |");
         System.out.println("| 1 | - | - | - | - | - | - |");
@@ -65,7 +68,7 @@ public class ShowSeat {
     }
 
     // calculate price
-    double calculatePrice(double price) {
+    double calculatePrice() {
         if (row > 0 && row <= 4) {
             price += 20;
         } else if (row >= 5) {

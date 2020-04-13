@@ -62,7 +62,7 @@ public class Main {
             showSeat.displayFloorPlan();
             d = showSeat.getNumSeats();
             showSeat.getSeatSelection();
-            e = showSeat.calculatePrice(0);
+            e = showSeat.calculatePrice();
             do {
                 System.out.print("Are you happy with your choice? Y = Yes / N = No: ");
                 choice = scanner.next().charAt(0);
@@ -73,9 +73,6 @@ public class Main {
 
         // create ticket object
         Ticket ticket = new Ticket(e);
-
-        // call ticket method
-        ticket.setPrice(e);
 
         // call consumer method
         consumer.getPaymentDetails();

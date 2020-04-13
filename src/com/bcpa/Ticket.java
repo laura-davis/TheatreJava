@@ -3,17 +3,12 @@ package com.bcpa;
 public class Ticket {
 
     // initialise variables
-    protected double totalCost;
+    protected double cost;
 
     // constructor with arguments
-    Ticket(double totalCost) {
-        this.totalCost = totalCost;
-    }
-
-    // set price
-    void setPrice(double price) {
-        totalCost = price;
-        System.out.println("\nThe total cost of your tickets (including any applicable discount) is £" + totalCost + ".\n");
+    Ticket(double cost) {
+        this.cost = cost;
+        System.out.println("\nThe total cost of your tickets (including any applicable discount) is £" + cost + ".\n");
     }
 
     // print ticket
@@ -24,7 +19,7 @@ public class Ticket {
         System.out.println("Date: \t\t\t\t" + showDate);
         System.out.println("Time: \t\t\t\t" + showTime);
         System.out.println("Number of seats: \t" + numSeats);
-        System.out.println("Total cost: \t\t" + "£" + totalCost);
+        System.out.println("Total cost: \t\t" + "£" + cost);
         System.out.println("Ticket purchaser: \t" + firstName + " " + lastName);
         System.out.println("Postal address: \t" + address);
     }

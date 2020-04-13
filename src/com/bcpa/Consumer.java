@@ -10,10 +10,6 @@ public class Consumer {
     // initialise scanner to collect user input
     Scanner scanner = new Scanner(System.in);
 
-    // constructor without arguments
-    Consumer() {
-    }
-
     // getters
     String getFirstName() {
         return firstName;

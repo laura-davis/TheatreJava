@@ -13,10 +13,6 @@ public class Show {
     // initialise scanner to collect user input
     Scanner scanner = new Scanner(System.in);
 
-    // constructor without arguments
-    Show() {
-    }
-
     // select show name
     String selectShowName() {
         System.out.println("\n------------------- Select a show --------------------\n");
