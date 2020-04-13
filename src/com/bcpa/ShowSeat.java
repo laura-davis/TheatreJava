@@ -8,13 +8,13 @@ public class ShowSeat {
     protected int row, numSeats;
     protected char column;
     protected String seatSelection;
-    protected double price = 0;
+    protected double price;
 
     // initialise scanner to collect user input
     Scanner scanner = new Scanner(System.in);
 
     public ShowSeat() {
-        this.price = price;
+        this.price = 0;
     }
 
     // get number of seats
