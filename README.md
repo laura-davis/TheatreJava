@@ -3,11 +3,9 @@
 ## Functionality:
 
 * Login
-* Create new Consumer
-* Select Show name, date and time
+* Create new <em>Consumer</em>
+* Select <em>Show</em> name, date and time
 * Display floorplan (hard-coded)
-* Choose number of seats
-* Select seat
+* Choose number of and select <em>Show Seats</em>
 * Calculate price
-* Pay for ticket
-* Print ticket
+* Pay for and print <em>Ticket</em>
