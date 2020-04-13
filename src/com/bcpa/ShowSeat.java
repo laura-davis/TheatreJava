@@ -19,12 +19,12 @@ public class ShowSeat {
 
     // get number of seats
     int getNumSeats() {
-        System.out.println("\n------------- Select seats interactively -------------\n");
+        System.out.println("\n------------- Select Seats Interactively -------------\n");
         do {
             System.out.print("How many seats would you like to purchase (maximum of 8)?: ");
             numSeats = scanner.nextInt();
         }
-        while (numSeats < 1 && numSeats > 8);
+        while (numSeats < 1 || numSeats > 8);
         return numSeats;
     }
 
@@ -34,7 +34,7 @@ public class ShowSeat {
             System.out.print("Please select a row number (1 - 7): ");
             row = scanner.nextInt();
         }
-        while (row < 1 && row > 7);
+        while (row < 1 || row > 7);
         do {
             System.out.print("Please select a column letter (A - F): ");
             column = scanner.next().charAt(0);

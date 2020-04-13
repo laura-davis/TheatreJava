@@ -15,12 +15,13 @@ public class Show {
 
     // select show name
     String selectShowName() {
-        System.out.println("\n------------------- Select a show --------------------\n");
+        System.out.println("\n------------------- Select a Show --------------------\n");
         System.out.println("1. Hamilton");
         System.out.println("2. Mamma Mia");
         System.out.println("3. Matilda");
+        System.out.println();
         do {
-            System.out.print("\nPlease select a valid show by entering a number (1 - 3): ");
+            System.out.print("Please select a valid show by entering a number (1 - 3): ");
             choice = scanner.next().charAt(0);
         }
         while (choice != '1' && choice != '2' && choice != '3');
@@ -40,12 +41,13 @@ public class Show {
 
     // select show date
     String selectShowDate() {
-        System.out.println("\n------------------- Select a date --------------------\n");
+        System.out.println("\n------------------- Select a Date --------------------\n");
         System.out.println("1. 01/04/2020");
-        System.out.println("2. 02//04/2020");
+        System.out.println("2. 02/04/2020");
         System.out.println("3. 03/04/2020");
+        System.out.println();
         do {
-            System.out.print("\nPlease select a valid date by entering a number (1 - 3): ");
+            System.out.print("Please select a valid date by entering a number (1 - 3): ");
             choice = scanner.next().charAt(0);
         }
         while (choice != '1' && choice != '2' && choice != '3');
@@ -65,7 +67,7 @@ public class Show {
 
     // select show time
     String selectShowTime() {
-        System.out.println("\n------------------- Select a time --------------------\n");
+        System.out.println("\n------------------- Select a Time --------------------\n");
         do {
             System.out.println("Would you like to book tickets for the matinee performance (1pm),");
             System.out.print("or the evening performance (7pm)? M = Matinee / E = Evening): ");

@@ -49,6 +49,7 @@ public class Consumer {
         System.out.print("Enter your last name: ");
         lastName = scanner.next();
         System.out.print("Enter your address: ");
+//        scanner.next();
         address = scanner.next();
     }
 

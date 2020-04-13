@@ -8,7 +8,8 @@ public class Ticket {
     // constructor with arguments
     Ticket(double cost) {
         this.cost = cost;
-        System.out.println("\nThe total cost of your tickets (including any applicable discount) is £" + cost + ".\n");
+        System.out.println();
+        System.out.println("The total cost of your tickets (including any applicable discount) is £" + cost + ".\n");
     }
 
     // print ticket
